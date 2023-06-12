@@ -1,30 +1,28 @@
 :root {
-  :root {
-    --neutral-900: hsl(0, 0%, 8%);
-    --neutral-800: hsl(0, 0%, 14%);
+  --neutral-900: hsl(0, 0%, 8%);
+  --neutral-800: hsl(0, 0%, 14%);
 
-    --accent-green-400: hsl(153, 71%, 59%);
+  --accent-green-400: hsl(153, 71%, 59%);
 
-    --stone-300: hsl(0, 0%, 85%);
-    --white: hsl(0, 0%, 100%);
-    --red-400: hsl(7, 100%, 68%);
+  --stone-300: hsl(0, 0%, 85%);
+  --white: hsl(0, 0%, 100%);
+  --red-400: hsl(7, 100%, 68%);
 
-    --text-8xl: 5.5rem;
-    --text-7xl: 4.5rem;
-    --text-6xl: 3rem;
-    --text-5xl: 2.5rem;
-    --text-4xl: 2.25rem;
-    --text-3xl: 2rem;
-    --text-2xl: 1.5rem;
-    --text-xl: 1.25rem;
-    --text-lg: 1.125rem;
+  --text-8xl: 5.5rem;
+  --text-7xl: 4.5rem;
+  --text-6xl: 3rem;
+  --text-5xl: 2.5rem;
+  --text-4xl: 2.25rem;
+  --text-3xl: 2rem;
+  --text-2xl: 1.5rem;
+  --text-xl: 1.25rem;
+  --text-lg: 1.125rem;
 
-    --container-lg: 69.375rem;
-    --container-md: 44.25rem;
-    --container-sm: 21.5625rem;
+  --container-lg: 69.375rem;
+  --container-md: 44.25rem;
+  --container-sm: 21.5625rem;
 
-    --transition: 250ms ease-in-out;
-  }
+  --transition: 250ms ease-in-out;
 }
 
 /******************/
@@ -37,10 +35,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  outline: 1px solid rgb(238, 81, 81);
 }
 
 html {
-  background: var(--neutral-900);
+  background-color: var(--neutral-900);
   height: 100%;
   scroll-behavior: smooth;
 }
@@ -100,4 +100,7 @@ h6 {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.container {
 }
