@@ -20,7 +20,7 @@
 
   --container-lg: 69.375rem;
   --container-md: 44.25rem;
-  --container-sm: 21.5625rem;
+  --container-sm: 21.4375rem;
 
   --transition: 250ms ease-in-out;
 }
@@ -103,4 +103,7 @@ h6 {
 }
 
 .container {
+  max-width: var(--container-lg);
+  margin-inline: auto;
+  padding: 0 1rem;
 }
