@@ -35,8 +35,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  outline: 1px solid rgb(238, 81, 81);
+  
+   /* outline: 1px solid rgb(238, 81, 81); */
 }
 
 html {
@@ -55,6 +55,11 @@ body {
 
 a {
   text-decoration: none;
+  color: #fff;
+}
+
+ol, ul {
+	list-style: none;
 }
 
 img,
@@ -83,6 +88,13 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
 /* Create a root stacking context */
 
 #root,
@@ -103,7 +115,11 @@ h6 {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: var(--container-lg);
   margin-inline: auto;
-  padding: 0 1rem;
+  padding: 0 16px;
 }
