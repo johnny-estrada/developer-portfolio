@@ -1,0 +1,137 @@
+---
+import Logo from "./ui/Logo.astro";
+---
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <Logo />
+    <p>
+      Based in the San Diego, I'm a front-end developer passionate about
+      building accessible web apps that users love.
+    </p>
+
+    <div class="footer__content">
+      <div class="flex-item">
+        <h4>BROWSE</h4>
+        <a>Home</a>
+        <a>About</a>
+        <a>Projects</a>
+        <a>Contact</a>
+      </div>
+
+      <div>
+        <h4>PROJECTS</h4>
+        <a>Bug Tracker App</a>
+      </div>
+
+      <div>
+        <h4>CONTACT</h4>
+        <div class="item">San Diego, CA</div>
+        <a href="https://www.github.com" class="footer_contact">
+          <img src="/icons/icon-github.svg" alt="" width="24px" height="24px" />
+          Github
+        </a>
+        <a>
+          <img
+            src="/icons/icon-linkedin.svg"
+            alt=""
+            width="24px"
+            height="24px"
+          />
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <div class="item">Built by Johnny Estrada @ 2023</div>
+    <div class="bg-pattern-rings2"></div>
+  </div>
+</footer>
+
+<style lang="scss">
+  .footer {
+    position: relative;
+    padding: 80px 0;
+    background-color: #242424;
+
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 150px;
+      margin-bottom: 20px;
+      border-bottom: #fff solid 1px;
+      width: 100%;
+    }
+
+    .flex-item {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px;
+    }
+
+    &__social {
+    }
+
+    p {
+      color: #d9d9d9;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: center;
+      margin: 10px 0 80px 0;
+    }
+
+    .item {
+      color: #d9d9d9;
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      display: flex;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 2.29px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    a:hover {
+      color: var(--accent-green-400);
+      transition: color 200ms ease-in-out;
+      text-decoration: underline;
+    }
+
+    a:focus {
+      color: var(--accent-green-400);
+    }
+
+    a:active {
+      color: var(--text-white);
+    }
+
+    img {
+      margin-right: 20px;
+    }
+  }
+
+  .bg-pattern-rings2 {
+    position: absolute;
+
+    right: 50%;
+    top: 600px;
+    // translate: -75%;
+    background-image: url("/icons/pattern-rings.svg");
+    background-repeat: no-repeat;
+    min-width: 530px;
+    min-height: 129px;
+    z-index: 1;
+  }
+</style>
