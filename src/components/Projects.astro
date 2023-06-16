@@ -1,0 +1,109 @@
+---
+---
+
+<section class="projects">
+  <div class="container">
+    <h2>PROJECTS<span>PROJECTS</span></h2>
+    <div class="projects__content">
+        <h3>Some Thing's I've Built</h3>
+    
+        <img src="/images/thumbnail-project-1-small.webp" alt="" />
+        <h4>BUG TRACKER WEB APP</h4>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JAVASCRIPT</li>
+        </ul>
+    
+        <nav>
+          <a>VIEW PROJECT</a>
+          <a>VIEW CODE</a>
+        </nav>
+      </div>
+    </div>
+    
+</section>
+
+<style lang="scss">
+  .projects {
+    position: relative;
+    background: rgba(36, 36, 36, 0.5);
+
+    h2 {
+      position: relative;
+      margin: 80px 0;
+      // margin: 200px 0;
+      font-weight: 700;
+      font-size: 32px;
+      color: var(--text-stone-300);
+      line-height: 40px;
+      letter-spacing: -1px;
+      z-index: 1;
+    }
+
+    span {
+      position: absolute;
+      top: -20px;
+      left: -65%;
+      font-weight: 700;
+      font-size: 70px;
+      line-height: 80px;
+      letter-spacing: -1px;
+      color: rgba(216, 216, 216, 0.03);
+      filter: blur(2px);
+      z-index: -1;
+    }
+
+    h3 {
+      margin-left: auto;
+      font-weight: 700;
+      font-size: 32px;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 7px;
+    }
+
+    ul {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 20px;
+      color: #D9D9D9;
+    }
+
+    nav {
+        display: flex;
+        margin-bottom: 80px;
+        gap: 30px;
+
+        a {
+        cursor: pointer;
+        color: var(--text-white);
+        border-bottom: 2px solid var(--accent-green-400);
+        padding-bottom: 10px;
+  
+        &:hover {
+          color: var(--accent-green-400);
+          transition: color 200ms ease-in-out;
+        }
+  
+        &:focus {
+          color: var(--accent-green-400);
+        }
+  
+        &:active {
+          color: var(--text-white);
+        }
+      }
+    }
+  }
+</style>
