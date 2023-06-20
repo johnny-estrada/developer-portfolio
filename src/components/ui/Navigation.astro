@@ -1,31 +1,31 @@
 ---
-
 ---
 
+<a class="link" href="/" aria-current="page">Home</a>
+<a class="link" href="/about">About</a>
+<a class="link" href="/#projects">Projects</a>
+<a class="link" href="/contact">Contact</a>
+
+
 <style lang="scss">
-    .link {
+  .link {
+    color: var(--text-white);
+    line-height: 1.625rem;
+    letter-spacing: 0.143125rem;
+    width: auto;
+    &:hover,
+    &:focus {
+      color: var(--accent-green-400);
+      transition: color 300ms ease-in-out;
+      transform: scale(1.1);
+    }
+    &:active {
       color: var(--text-white);
-      line-height: 1.625rem;
-      letter-spacing: 0.143125rem;
-      width: auto;
-  
-  
-      &:hover {
-        color: var(--accent-green-400);
-        transition: color 200ms ease-in-out;
-      }
-  
-      &:focus {
-        color: var(--accent-green-400);
-      }
-  
-      &:active {
-        color: var(--text-white);
+    }
+    @media screen and (min-width: 768px) {
+      .mobile-nav {
+        display: none;
       }
     }
-  </style>
-  
-<a class="link" href="/" aria-current="page">HOME</a>
-<a class="link" href="/about">ABOUT</a>
-<a class="link"  href="/#projects">PROJECTS</a>
-<a class="link" href="/contact">CONTACT</a>
+  }
+</style>
