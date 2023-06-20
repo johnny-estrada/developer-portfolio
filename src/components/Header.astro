@@ -5,36 +5,41 @@ import Navigation from "./ui/Navigation.astro";
 ---
 
 <header class="header" role="banner">
-  <div class="container">
-    <div class="header__col-left" role="navigation">
-      <Logo />
-    </div>
-    <nav class="header__col-right" role="navigation" aria-label="Main nav">
+  <div class="wrapper header__container">
+    <Logo />
+
+    <nav class="header__desktop-nav" role="navigation" aria-label="Main nav">
+      <Navigation />
+    </nav>
+    <nav class="header__mobile-nav" role="navigation" aria-label="Main nav">
       <Hamburger />
-      <!-- <Navigation /> -->
     </nav>
   </div>
 </header>
 
 <style lang="scss">
   .header {
-    &__col-left {
-      margin-left: 89px;
-    }
-
-    &__col-right {
-        display: flex;
-        justify-content: baseline;
-        align-items: center;
-        gap: 20px;
-    }
-
-    div {
+    &__container {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: baseline;
-      padding: 25px 16px 0 16px;
+      align-items: center;
+      padding-top: 1.5625rem;
+    }
+    &__desktop-nav {
+      display: flex;
+      gap: 2rem;
+    }
+    @media screen and (max-width: 768px) {
+      &__desktop-nav {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      &__mobile-nav {
+        display: none;
+      }
     }
   }
 </style>
