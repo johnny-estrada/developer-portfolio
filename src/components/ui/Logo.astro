@@ -137,11 +137,17 @@
 <style lang="scss">
   .logo {
     width: 166px;
-    height: 32px;
-
-    &__text {
+    height: 32px; 
     fill: #ffffff;
+
+    &:hover {
+      fill: var(--accent-green-400);
+      transition: fill 300ms ease-in-out;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      fill: #fff;
+    }
   }
-  }
-  
 </style>
