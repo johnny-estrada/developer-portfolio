@@ -2,64 +2,100 @@
 ---
 
 <section class="projects">
-  <div class="container">
-    <h2>PROJECTS<span>PROJECTS</span></h2>
+  <h2>PROJECTS</h2>
+  <div class="wrapper">
+    <h3>Some Thing's I've Built</h3>
     <div class="projects__content">
-        <h3>Some Thing's I've Built</h3>
-    
-        <img src="/images/thumbnail-project-1-small.webp" alt="" />
+      <div class="projects__card">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="/images/thumbnail-project-1-large.webp"
+          />
+          <img
+            src="/images/thumbnail-project-1-small.webp"
+            alt=""
+            width="343"
+            height="253"
+          />
+        </picture>
+
         <h4>BUG TRACKER WEB APP</h4>
         <ul>
           <li>HTML</li>
           <li>CSS</li>
           <li>JAVASCRIPT</li>
         </ul>
-    
+
         <nav>
           <a href="/projects">VIEW PROJECT</a>
-          <a href="https://github.com/johnny-estrada/developer-portfolio">VIEW CODE</a>
+          <a href="https://github.com/johnny-estrada/developer-portfolio"
+            >VIEW CODE</a
+          >
+        </nav>
+      </div>
+      <div class="projects__card">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="/images/thumbnail-project-1-large.webp"
+          />
+          <img
+            src="/images/thumbnail-project-1-small.webp"
+            alt=""
+            width="343"
+            height="253"
+          />
+        </picture>
+
+        <h4>BUG TRACKER WEB APP</h4>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JAVASCRIPT</li>
+        </ul>
+
+        <nav>
+          <a href="/projects">VIEW PROJECT</a>
+          <a href="https://github.com/johnny-estrada/developer-portfolio"
+            >VIEW CODE</a
+          >
         </nav>
       </div>
     </div>
-    
+  </div>
 </section>
 
 <style lang="scss">
   .projects {
-    position: relative;
-    background: rgba(36, 36, 36, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    background: var(--neutral-500);
 
-    h2 {
-      position: relative;
-      margin: 80px 0;
-      // margin: 200px 0;
-      font-weight: 700;
-      font-size: 32px;
-      color: var(--text-stone-300);
-      line-height: 40px;
-      letter-spacing: -1px;
-      z-index: 1;
+    &__content {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      outline: blue solid 1px;
     }
 
-    span {
-      position: absolute;
-      top: -20px;
-      left: -65%;
+    h2 {
+      margin-block: 80px;
       font-weight: 700;
-      font-size: 70px;
-      line-height: 80px;
-      letter-spacing: -1px;
-      color: rgba(216, 216, 216, 0.03);
-      filter: blur(2px);
-      z-index: -1;
+      font-size: var(--main-heading);
+      line-height: 40px;
+      letter-spacing: -1.13636px;
     }
 
     h3 {
-      margin-left: auto;
       font-weight: 700;
-      font-size: 32px;
+      font-size: var(--step-0);
       letter-spacing: -1px;
       margin-bottom: 16px;
+      text-align: center;
     }
 
     img {
@@ -77,29 +113,29 @@
       display: flex;
       gap: 18px;
       margin-bottom: 20px;
-      color: #D9D9D9;
+      color: var(--stone-300);
     }
 
     nav {
-        display: flex;
-        margin-bottom: 80px;
-        gap: 30px;
+      display: flex;
+      margin-bottom: 80px;
+      gap: 30px;
 
-        a {
+      a {
         cursor: pointer;
         color: var(--text-white);
         border-bottom: 2px solid var(--accent-green-400);
         padding-bottom: 10px;
-  
+
         &:hover {
           color: var(--accent-green-400);
           transition: color 200ms ease-in-out;
         }
-  
+
         &:focus {
           color: var(--accent-green-400);
         }
-  
+
         &:active {
           color: var(--text-white);
         }

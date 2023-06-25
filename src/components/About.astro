@@ -2,82 +2,118 @@
 ---
 
 <section class="about">
-  <div class="container">
-    <h2>
-      ABOUT
-      <span>ABOUT</span>
-    </h2>
+  <h2>ABOUT</h2>
+  <div class="wrapper">
+    <div class="about__content">
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="/images/avatar-desktop.webp"
+        />
+        <img
+          src="/images/avatar-mobile.webp"
+          alt="A man sitting behind a sunset, relaxed, with an amazing smile."
+          width-="350"
+          height="auto"
+        />
+      </picture>
 
-    <h3>Get To Know Me</h3>
-    <img
-      src="/images/avatar-mobile.webp"
-      alt="A man sitting behind a sunset, relaxed, with an amazing smile."
-    />
-    <p>
-      I'm Johnny, a full-stack web developer passionate about crafting great
-      applications using the web.
-    </p>
-    <a href="/about">
-      LEARN MORE
-      <span class="visually-hidden"> about Johnny and his background.</span>
-    </a>
+      <div class="about__text">
+        <h3>Get To Know Me</h3>
+        <p>
+          I'm Johnny, a full-stack web developer passionate about crafting great
+          applications using the web.
+        </p>
+        <a href="/about">
+          LEARN MORE
+          <span class="visually-hidden"> about Johnny and his background.</span>
+        </a>
+      </div>
+    </div>
   </div>
   <div class="bg-pattern-ring"></div>
 </section>
 
 <style lang="scss">
   .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 80px;
-    // position: relative;
-    h2 {
-      position: relative;
-      margin: 80px 0;
-      // margin: 200px 0;
-      font-weight: 700;
-      font-size: 32px;
-      color: var(--text-stone-300);
-      line-height: 40px;
-      letter-spacing: -1px;
-      z-index: 1;
+    @media (min-width: 600px) {
+      &__content {
+        display: flex;
+      }
+
+      img {
+        max-width: 500px;
+        max-height: 400px;
+      }
     }
 
-    span {
-      position: absolute;
-      top: -20px;
-      left: -50%;
+    @media (min-width: 900px) {
+      &__content {
+        margin-bottom: 180px;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      margin-block: 40px;
+    }
+
+    h2 {
+      margin-block: 80px;
       font-weight: 700;
-      font-size: 70px;
-      line-height: 80px;
-      letter-spacing: -1px;
-      color: rgba(35, 35, 35, 0.5);
-      filter: blur(2px);
-      z-index: -1;
+      font-size: var(--main-heading);
+      line-height: 40px;
+      letter-spacing: -1.13636px;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+
+    @media (min-width: 600px) {
+      img {
+        margin-right: 60px;
+      }
     }
 
     h3 {
       font-weight: 700;
-      font-size: 32px;
+      font-size: var(--step-0);
+      text-align: center;
       letter-spacing: -1px;
-      margin-bottom: 16px;
-    }
-
-    img {
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
     p {
-      color: #d9d9d9;
-      font-size: 16px;
+      color: var(--stone-300);
+      font-size: var(--body-text);
       line-height: 26px;
       text-align: center;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 600px) {
+      h3, p {
+        text-align: left;
+      }
     }
 
     a {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 26px;
+      letter-spacing: 2.286px;
       cursor: pointer;
       color: var(--text-white);
       border-bottom: 2px solid var(--accent-green-400);
-      padding-bottom: 10px;
+      width: 120px;
+      height: 42px;
+      margin: 0 auto;
 
       &:hover {
         color: var(--accent-green-400);
@@ -93,9 +129,14 @@
       }
     }
 
+    @media (min-width: 600px) {
+      a {
+        margin: 0;
+      }
+    }
+
     .bg-pattern-ring {
       background-image: url("/icons/pattern-rings.svg");
-
       background-repeat: no-repeat;
       object-fit: contain;
       min-width: 50%;

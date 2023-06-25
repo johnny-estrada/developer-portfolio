@@ -3,12 +3,14 @@ import Logo from "./ui/Logo.astro";
 ---
 
 <footer class="footer" role="contentinfo">
-  <div class="container">
-    <Logo />
-    <p>
-      Based in the San Diego, I'm a front-end developer passionate about
-      building accessible web apps that users love.
-    </p>
+  <div class="wrapper footer__container">
+    <div class="flex-item">
+      <Logo />
+      <p>
+        Based in the San Diego, I'm a front-end developer passionate about
+        building accessible web apps that users love.
+      </p>
+    </div>
 
     <div class="footer__content">
       <div class="flex-item">
@@ -25,8 +27,16 @@ import Logo from "./ui/Logo.astro";
       </div>
 
       <div>
-        <h4>CONTACT</h4>
-        <div class="item">San Diego, CA</div>
+        <h4>SOCIAL</h4>
+        <div class="item">
+          <img
+            src="/icons/icon-location.svg"
+            alt=""
+            width="24px"
+            height="24px"
+          />
+          San Diego, CA
+        </div>
         <a href="https://github.com/johnny-estrada" class="footer_contact">
           <img src="/icons/icon-github.svg" alt="" width="24px" height="24px" />
           Github
@@ -42,65 +52,77 @@ import Logo from "./ui/Logo.astro";
         </a>
       </div>
     </div>
+    
 
-    <div class="item">Built by Johnny Estrada @ 2023</div>
     <div class="bg-pattern-rings2"></div>
   </div>
+  <div class="flex-item">Built by Johnny Estrada @ 2023</div>
 </footer>
 
 <style lang="scss">
   .footer {
     position: relative;
-    padding: 80px 0;
-    background-color: #242424;
+    padding: 5rem 0;
+    background: var(--neutral-800);
 
     &__content {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding-bottom: 150px;
-      margin-bottom: 20px;
-      border-bottom: #fff solid 1px;
+      padding-bottom: 9.375rem;
+      margin-bottom: 1.25rem;
       width: 100%;
+    }
+
+    &__container {
+        border-bottom: var(--white) solid 1px;
+      }
+
+    @media screen and (min-width: 768px) {
+      &__container {
+        display: flex;
+        border-bottom: var(--white) solid 1px;
+      }
     }
 
     .flex-item {
       display: flex;
       flex-direction: column;
-      padding-bottom: 20px;
-    }
-
-    &__social {
+      align-items: center;
+      padding-bottom: 1.25rem;
     }
 
     p {
-      color: #d9d9d9;
-      font-size: 16px;
-      line-height: 26px;
+      color: var(--stone-300);
+      font-size: 1rem;
+      line-height: 1.625rem;
       text-align: center;
-      margin: 10px 0 80px 0;
+      margin: 0.625rem 0 5rem 0;
     }
 
     .item {
-      color: #d9d9d9;
-      font-size: 16px;
-      line-height: 26px;
-      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: var(--stone-300);
+      font-size: 1rem;
+      line-height: 1.625rem;
+      margin-bottom: 0.625rem;
     }
 
     h4 {
-      font-size: 18px;
-      line-height: 28px;
-      margin-bottom: 10px;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      margin-bottom: 0.625rem;
     }
 
     a {
       display: flex;
-      font-size: 16px;
-      line-height: 26px;
-      letter-spacing: 2.29px;
+      font-size: 1rem;
+      line-height: 1.625rem;
+      letter-spacing: 0.143125rem;
       cursor: pointer;
-      margin-bottom: 20px;
+      margin-bottom: 0.5rem;
     }
 
     a:hover {
@@ -118,7 +140,7 @@ import Logo from "./ui/Logo.astro";
     }
 
     img {
-      margin-right: 20px;
+      margin-right: 1.25rem;
     }
   }
 
