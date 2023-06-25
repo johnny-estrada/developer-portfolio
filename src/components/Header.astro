@@ -6,7 +6,9 @@ import Navigation from "./ui/Navigation.astro";
 
 <header class="header" role="banner">
   <div class="wrapper header__container">
-    <Logo />
+    <a class="link" href="/" aria-label="Go to the homepage.">
+      <Logo />
+    </a>
 
     <nav class="header__desktop-nav" role="navigation" aria-label="Main nav">
       <Navigation />
@@ -27,19 +29,29 @@ import Navigation from "./ui/Navigation.astro";
       padding-top: 1.5625rem;
     }
     &__desktop-nav {
+      margin-right: 32px;
       display: flex;
       gap: 2rem;
     }
-    @media screen and (max-width: 768px) {
+    @media (max-width: 899px) {
       &__desktop-nav {
         display: none;
       }
     }
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: 900px) {
       &__mobile-nav {
         display: none;
       }
+    }
+  }
+
+  .link {
+    margin: auto;
+    translate: 12%;
+
+    @media (min-width: 600px) {
+      margin: 0;
     }
   }
 </style>
