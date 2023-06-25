@@ -1,6 +1,7 @@
 :root {
   --neutral-900: hsl(0, 0%, 8%);
   --neutral-800: hsl(0, 0%, 14%);
+  --neutral-500:  rgba(36, 36, 36, 0.5);
 
   --accent-green-400: hsl(153, 71%, 59%);
 
@@ -25,11 +26,33 @@
   --container-sm: 21.4375rem;
 
   --transition: 250ms ease-in-out;
+
+  --main-heading: clamp(2.50rem, calc(1.44rem + 4.51vw), 5.50rem);
+  --body-text: clamp(1.00rem, calc(0.96rem + 0.18vw), 1.13rem);
+  --step-0: clamp(2.00rem, calc(1.65rem + 1.50vw), 3.00rem);
 }
 
 /******************/
 /*** CSS Reset ***/
 /****************/
+/* space-grotesk-500 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../assets/fonts/space-grotesk-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* space-grotesk-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/space-grotesk-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 
 *,
 *::before,
@@ -38,7 +61,7 @@
   margin: 0;
   padding: 0;
   
-   outline: 1px solid rgb(238, 81, 81);
+   /* outline: 1px solid rgb(238, 81, 81); */
 }
 
 html {
@@ -123,8 +146,12 @@ footer, header, hgroup, menu, nav, section {
 .wrapper {
   width: Min(100% - 2rem, 1110px); 
   margin-inline: auto;
-}
 
-.flow > * + * {
-  background-color: red;
+  
+}
+@media (min-width: 600px) {
+  .wrapper {
+    width: Min(100% - 3rem, 1110px);
+  }
+  
 }
