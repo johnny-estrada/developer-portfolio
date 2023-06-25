@@ -2,43 +2,93 @@
 ---
 
 <section class="hero">
-  <div class="container hero__container">
-    <div class="img-wrapper">
-      <!-- <image class="hero__img" src="/images/hero-image-mobile.webp" alt="" /> -->
-      <image class="hero__img" src="/images/hero-image-mobile.webp" alt="A black and white picture of Johnny Estrada smilling, with his arms crossed." width="174px" min-height="383px" />
+  <div class="wrapper hero__container">
+    <div class="hero__content">
+      <picture>
+        <source
+          media="(min-width: 900px"
+          srcset="/images/hero-image-desktop.webp"
+        />
+        <source
+          media="(min-width: 600px)"
+          srcset="/images/hero-image-tablet.webp"
+        />
+        <img
+          class="hero__img"
+          src="/images/hero-image-mobile.webp"
+          alt="Black and white picture of Johnny Estrada."
+          width-="174"
+          height="383"
+        />
+      </picture>
+
+      <div class="hero__text">
+        <h1>
+          Nice <span class="line-break">to</span> meet you!<br /> I'm <span
+            >Johnny.</span
+          >
+        </h1>
+        <p>
+          Based in the San Diego, I'm a front-end developer passionate about
+          building accessible web apps that users love.
+        </p>
+        <a href="/contact">LETS CHAT</a>
+      </div>
     </div>
-
-      <h1>Nice to meet you! I'm Johnny.</h1>
-      <p>
-        Based in the San Diego, I'm a front-end developer passionate about
-        building accessible web apps that users love.
-      </p>
-      <a href="/contact">LETS CHAT</a>
-
   </div>
   <div class="bg-pattern-rings"></div>
   <div class="bg-pattern-circle"></div>
 </section>
 
 <style lang="scss">
-  .hero {
+  /******************/
+  /*** HERO CSS  ***/
+  /****************/
 
-    .img-wrapper {
-      width: 174px;
-      height: 325px;
-      margin-bottom: 40px;
+  .hero {
+    // @media (min-width: 768px) {
+    //   .hero {
+    //     position: relative;
+    //     // margin-block-start: -62px;
+    //   }
+    // }
+
+    &__container {
+      border-bottom: var(--white) solid 1px;
     }
 
     &__img {
       position: absolute;
-      object-fit: contain;
       top: 0;
+      left: 50%;
+      translate: -50%;
+      width: 174px;
+      height: auto;
       z-index: -1;
     }
 
-    &__container {
-      padding: 0 16px;
-      border-bottom: var(--white) solid 1px;
+    @media (min-width: 600px) {
+      &__img {
+        left: calc(max(100vw - 11.5rem));
+        // translate: 0%;
+        width: auto;
+      }
+    }
+
+    &__content {
+      outline: #4ee1a0 solid 1px;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-block: 350px 80px;
+
+      @media (min-width: 600px) {
+        display: block;
+        margin-block: 120px 258px;
+      }
     }
 
     .bg-pattern-rings {
@@ -65,20 +115,54 @@
 
     h1 {
       font-weight: 700;
-      font-size: 40px;
-      line-height: 40px;
-
+      // font-size: 2.5em;
+      font-size: var(--main-heading);
       text-align: center;
-      letter-spacing: -1.13636px;
+      line-height: 2.5rem;
+      letter-spacing: -0.0710225rem;
       margin-bottom: 24px;
     }
 
+    @media screen and (min-width: 600px) {
+      h1 {
+        // max-width: 706px;
+        text-align: left;
+        // font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -2.045px;
+      }
+    }
+
+    // span {
+    //   position: absolute;
+    //   padding: 0 10px;
+    //   border-bottom: 6px solid var(--accent-green-400);
+    //   // top: 0;
+    // }
+
     p {
-      font-size: 16px;
-      line-height: 26px;
-      color: #D9D9D9;
+      max-width: 445px;
+      // font-size: 16px;
+      font-size: var(--body-text);
       text-align: center;
+      line-height: 26px;
+      color: #d9d9d9;
       margin-bottom: 36px;
+    }
+
+    @media (min-width: 600px) {
+      p {
+        text-align: left;
+        // font-size: 18px;
+        // line-height: 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .line-break::after {
+        content: "\a";
+        white-space: pre;
+      }
     }
 
     a {
@@ -91,24 +175,31 @@
       border: 2px solid #4ee1a0;
       box-shadow: 5px 8px rgba(78, 225, 160, 0.25);
       border-radius: 50px;
-      margin-bottom: 80px;
-
       &:hover {
-      background-color: var(--accent-green-400);
-      box-shadow: 0px 0px 50px 1px rgba(78, 225, 160, 0.25);
-      translate: 2px 2px;
-      transition: all 300ms ease-in-out;
+        background-color: var(--accent-green-400);
+        box-shadow: 0px 0px 50px 1px rgba(78, 225, 160, 0.25);
+        translate: 2px 2px;
+        transition: all 300ms ease-in-out;
+        transform: scale(0.95);
+      }
+      &:focus {
+        border: none;
+        background-color: var(--accent-green-400);
+        box-shadow: 0px 0px 50px 1px rgba(78, 225, 160, 0.25);
+        transform: scale(0.95);
+      }
+      &:active {
+        border: none;
+        color: #212121;
+        background-color: white;
+        transform: scale(1.1);
+      }
     }
-    &:focus {
-      border: none;
-      background-color: var(--accent-green-400);
-      box-shadow: 0px 0px 50px 1px rgba(78, 225, 160, 0.25);
-    }
-    &:active {
-      border: none;
-      color: #212121;
-      background-color: white;
-    }
+
+    @media (min-width: 768px) {
+      a {
+        margin-block: 80px;
+      }
     }
   }
 </style>
