@@ -46,20 +46,21 @@
   /****************/
 
   .hero {
-    // @media (min-width: 768px) {
-    //   .hero {
-    //     position: relative;
-    //     // margin-block-start: -62px;
-    //   }
-    // }
+    @media (min-width: 768px) {
+      .hero {
+        position: relative;
+        // margin-block-start: -62px;
+      }
+    }
 
     &__container {
+      position: relative;
       border-bottom: var(--white) solid 1px;
     }
 
     &__img {
       position: absolute;
-      top: 0;
+      top: -120%;
       left: 50%;
       translate: -50%;
       width: 174px;
@@ -69,9 +70,18 @@
 
     @media (min-width: 600px) {
       &__img {
-        left: calc(max(100vw - 11.5rem));
-        // translate: 0%;
+        top: -36%;
+        left: calc(max(100% - 13rem));
+        translate: -28%;
+
         width: auto;
+      }
+    }
+
+    @media (min-width: 900px) {
+      &__img {
+        top: -27%;
+        translate: -53%;
       }
     }
 
@@ -87,7 +97,12 @@
 
       @media (min-width: 600px) {
         display: block;
-        margin-block: 120px 258px;
+        margin-block: 120px 100px;
+      }
+
+      @media (min-width: 900px) {
+        display: block;
+        margin-block: 120px 300px;
       }
     }
 
@@ -97,9 +112,10 @@
       width: 530px;
       height: 129px;
       position: absolute;
+      z-index: -2;
+
       left: -310px;
       top: 120px;
-      z-index: -2;
     }
 
     .bg-pattern-circle {
@@ -108,14 +124,32 @@
       position: absolute;
       height: 129px;
       right: 0;
+      left: 52%;
+      top: 55%;
+      z-index: 1;
+
       left: 80%;
       top: 254px;
-      z-index: 1;
+    }
+
+    @media (min-width: 600px) {
+      .bg-pattern-circle {
+      left: 90%;
+      top: 470px;
+    }
+    }
+
+    @media (min-width: 900px) {
+      .bg-pattern-circle {
+      transform: translate(-5%);
+      left: 55%;
+      top: 470px;
+    }
     }
 
     h1 {
+      position: relative;
       font-weight: 700;
-      // font-size: 2.5em;
       font-size: var(--main-heading);
       text-align: center;
       line-height: 2.5rem;
@@ -125,7 +159,6 @@
 
     @media screen and (min-width: 600px) {
       h1 {
-        // max-width: 706px;
         text-align: left;
         // font-size: 72px;
         line-height: 72px;
@@ -158,7 +191,7 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 600px) and (max-width: 900px) {
       .line-break::after {
         content: "\a";
         white-space: pre;
@@ -174,7 +207,6 @@
       height: 56px;
       border: 2px solid #4ee1a0;
       box-shadow: 5px 8px rgba(78, 225, 160, 0.25);
-      border-radius: 50px;
       &:hover {
         background-color: var(--accent-green-400);
         box-shadow: 0px 0px 50px 1px rgba(78, 225, 160, 0.25);
@@ -195,11 +227,6 @@
         transform: scale(1.1);
       }
     }
-
-    @media (min-width: 768px) {
-      a {
-        margin-block: 80px;
-      }
-    }
   }
+
 </style>
