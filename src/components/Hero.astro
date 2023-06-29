@@ -3,6 +3,7 @@
 
 <section class="hero">
   <div class="wrapper hero__container">
+    <div class="bg-pattern-rings"></div>
     <div class="hero__content">
       <picture>
         <source
@@ -36,7 +37,6 @@
       </div>
     </div>
   </div>
-  <div class="bg-pattern-rings"></div>
   <div class="bg-pattern-circle"></div>
 </section>
 
@@ -49,7 +49,6 @@
     @media (min-width: 768px) {
       .hero {
         position: relative;
-        // margin-block-start: -62px;
       }
     }
 
@@ -115,8 +114,23 @@
       z-index: -2;
 
       left: -310px;
-      top: 120px;
+      top: -300px;
     }
+
+    @media (min-width: 600px) {
+      .bg-pattern-rings {
+        top:-13%;
+        left: -70%;
+      }
+    }
+
+    @media (min-width: 700px) {
+      .bg-pattern-rings {
+        top: -75px;
+        left: -270px;
+      }
+    }
+
 
     .bg-pattern-circle {
       background-image: url("/icons/pattern-circle.svg");
