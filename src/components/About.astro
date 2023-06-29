@@ -5,16 +5,17 @@
   <h2>ABOUT</h2>
   <div class="wrapper">
     <div class="about__content">
+      <div class="bg-pattern-ring"></div>
       <picture>
         <source
-          media="(min-width: 768px)"
+          media="(min-width: 600px)"
           srcset="/images/avatar-desktop.webp"
         />
         <img
           src="/images/avatar-mobile.webp"
           alt="A man sitting behind a sunset, relaxed, with an amazing smile."
-          width-="350"
-          height="auto"
+          width-="400"
+          height="350"
         />
       </picture>
 
@@ -31,7 +32,6 @@
       </div>
     </div>
   </div>
-  <div class="bg-pattern-ring"></div>
 </section>
 
 <style lang="scss">
@@ -39,10 +39,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 80px;
+    margin: 80px 0;
+
     @media (min-width: 600px) {
+      &.about {
+        margin-bottom: 100px;
+      }
+
+      h2 {
+        margin-block: 100px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 100%;
+      border: solid green 1px;
+      margin-left: 0;
+    }
+
+    @media (min-width: 700px) {
       &__content {
-        display: flex;
+        flex-direction: row;
       }
 
       img {
@@ -53,6 +73,7 @@
 
     @media (min-width: 900px) {
       &__content {
+        position: relative;
         margin-bottom: 180px;
       }
     }
@@ -60,24 +81,30 @@
     &__text {
       display: flex;
       flex-direction: column;
-      margin-block: 40px;
+    }
+
+    @media (min-width: 600px) {
+      &__text {
+        margin-left: 0px;
+      }
     }
 
     h2 {
-      margin-block: 80px;
       font-weight: 700;
       font-size: var(--main-heading);
       line-height: 40px;
       letter-spacing: -1.13636px;
+      margin-bottom: 80px;
     }
 
     img {
-      margin: 0 auto;
+      margin: 0 auto 40px auto;
     }
 
     @media (min-width: 600px) {
       img {
-        margin-right: 60px;
+        margin-right: 32px;
+        width: 350px;
       }
     }
 
@@ -90,6 +117,7 @@
     }
 
     p {
+      max-width: 445px;
       color: var(--stone-300);
       font-size: var(--body-text);
       line-height: 26px;
@@ -98,7 +126,8 @@
     }
 
     @media (min-width: 600px) {
-      h3, p {
+      h3,
+      p {
         text-align: left;
       }
     }
@@ -138,13 +167,19 @@
     .bg-pattern-ring {
       background-image: url("/icons/pattern-rings.svg");
       background-repeat: no-repeat;
-      object-fit: contain;
-      min-width: 50%;
-      min-height: 129px;
+      width: 50%;
+      height: 129px;
       position: absolute;
       left: 50%;
-      top: 216%;
-      z-index: 1;
+      top: 210%;
+      z-index: -1;
+
+      @media (min-width: 600px) {
+        &.bg-pattern-ring {
+          left: 80%;
+          top: 65%;
+        }
+      }
     }
   }
 </style>
