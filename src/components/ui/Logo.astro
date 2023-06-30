@@ -135,9 +135,14 @@
 
 <style lang="scss">
   .logo {
-    width: 166px;
+    width: 100%;
+    max-width: 166px;
     height: auto; 
     fill: #ffffff;
+
+    @media (min-width: 600px) {
+      max-width: 172px;
+    }
 
     &:hover {
       fill: var(--accent-green-400);
