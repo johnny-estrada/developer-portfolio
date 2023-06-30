@@ -7,7 +7,7 @@
     <div class="hero__content">
       <picture>
         <source
-          media="(min-width: 900px"
+          media="(min-width: 900px)"
           srcset="/images/hero-image-desktop.webp"
         />
         <source
@@ -18,16 +18,16 @@
           class="hero__img"
           src="/images/hero-image-mobile.webp"
           alt="Black and white picture of Johnny Estrada."
-          width-="174"
-          height="383"
+          width="50%"
+          height="auto"
         />
       </picture>
 
       <div class="hero__text">
         <h1>
-          Nice <span class="line-break">to</span> meet you!<br /> I'm <span
-            >Johnny.</span
-          >
+          Nice <span class="line-break">to</span> meet you!<br /> I'm <span class="green-line"
+            >Johnny</span
+          >.
         </h1>
         <p>
           Based in San Diego, I'm a front-end developer passionate about
@@ -62,8 +62,6 @@
       top: -120%;
       left: 50%;
       translate: -50%;
-      width: 174px;
-      height: auto;
       z-index: -1;
     }
 
@@ -113,7 +111,7 @@
       position: absolute;
       z-index: -2;
 
-      left: -310px;
+      left: -330px;
       top: -300px;
     }
 
@@ -126,7 +124,7 @@
 
     @media (min-width: 700px) {
       .bg-pattern-rings {
-        top: -75px;
+        top: -72px;
         left: -270px;
       }
     }
@@ -162,6 +160,7 @@
     }
 
     h1 {
+      min-width: 445px;
       position: relative;
       font-weight: 700;
       font-size: var(--main-heading);
@@ -180,12 +179,9 @@
       }
     }
 
-    // span {
-    //   position: absolute;
-    //   padding: 0 10px;
-    //   border-bottom: 6px solid var(--accent-green-400);
-    //   // top: 0;
-    // }
+    .green-line {
+      border-bottom: 6px solid var(--accent-green-400);
+    }
 
     p {
       max-width: 445px;
