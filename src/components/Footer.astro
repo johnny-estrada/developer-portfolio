@@ -4,17 +4,17 @@ import Logo from "./ui/Logo.astro";
 
 <footer class="footer" role="contentinfo">
   <div class="bg-pattern-rings2"></div>
-  <div class="wrapper footer__container">
+  <div class="footer__container wrapper">
     <div class="flex-item">
       <Logo />
       <p>
-        Based in San Diego, I'm a front-end developer passionate about
-        building accessible web apps that users love.
+        Based in San Diego, I'm a front-end developer passionate about building
+        accessible web apps that users love.
       </p>
     </div>
 
     <div class="footer__content">
-      <div class="flex-item">
+      <div class="flex-ite">
         <h4>BROWSE</h4>
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -22,46 +22,68 @@ import Logo from "./ui/Logo.astro";
         <a href="/contact">Contact</a>
       </div>
 
-      <div>
+      <div class="flex-ite">
         <h4>PROJECTS</h4>
         <a href="/projects/bug-tracker">Bug Tracker App</a>
       </div>
 
-      <div class="flex-item">
+      <div class="flex-ite">
         <h4>SOCIAL</h4>
-        <div class="item">
+        <div class="social-item">
           <img
             src="/icons/icon-location.svg"
             alt=""
-            width="24px"
-            height="24px"
+            width="20px"
+            height="20px"
           />
           San Diego, CA
         </div>
-        <a href="https://github.com/johnny-estrada" class="footer_contact">
-          <img src="/icons/icon-github.svg" alt="" width="24px" height="24px" />
-          Github
-        </a>
-        <a href="https://www.linkedin.com/in/estrada-johnny/">
-          <img
-            src="/icons/icon-linkedin.svg"
-            alt=""
-            width="24px"
-            height="24px"
-          />
-          LinkedIn
-        </a>
+        <div class="social-item">
+          <a href="https://github.com/johnny-estrada" class="footer_contact">
+            <img
+              src="/icons/icon-github.svg"
+              alt=""
+              width="20px"
+              height="20px"
+            />
+            Github
+          </a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.linkedin.com/in/estrada-johnny/">
+            <img
+              src="/icons/icon-linkedin.svg"
+              alt=""
+              width="20px"
+              height="20px"
+            />
+            LinkedIn
+          </a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="flex-item">Built by Johnny Estrada @ 2023</div>
+  <div class="footer__adoration flex-item">Built by Johnny Estrada - 2023</div>
 </footer>
 
 <style lang="scss">
   .footer {
     position: relative;
-    padding: 5rem 0;
     background: var(--neutral-800);
+    padding: 60px 0 0px 0;
+    // outline: green solid 1px;
+
+    &__container {
+      border-bottom: var(--white) solid 1px;
+      // outline: blue solid 1px;
+    }
+
+    @media screen and (min-width: 768px) {
+      &__container {
+        display: flex;
+        border-bottom: var(--white) solid 1px;
+      }
+    }
 
     &__content {
       display: flex;
@@ -72,15 +94,8 @@ import Logo from "./ui/Logo.astro";
       width: 100%;
     }
 
-    &__container {
-        border-bottom: var(--white) solid 1px;
-      }
-
-    @media screen and (min-width: 768px) {
-      &__container {
-        display: flex;
-        border-bottom: var(--white) solid 1px;
-      }
+    &__adoration {
+      margin-top: 20px;
     }
 
     .flex-item {
@@ -88,7 +103,12 @@ import Logo from "./ui/Logo.astro";
       flex-wrap: wrap;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 1.25rem;
+      padding-bottom: 60px;
+    }
+
+    .flex-ite {
+      margin-bottom: 60px;
+
     }
 
     p {
@@ -96,13 +116,13 @@ import Logo from "./ui/Logo.astro";
       font-size: 1rem;
       line-height: 1.625rem;
       text-align: center;
-      margin: 0.625rem 0 5rem 0;
+      margin-top: 0.625rem;
     }
 
-    .item {
+    .social-item {
       display: flex;
       align-items: center;
-      text-align: center;
+      // text-align: center;
       color: var(--stone-300);
       font-size: 1rem;
       line-height: 1.625rem;
@@ -139,7 +159,7 @@ import Logo from "./ui/Logo.astro";
     }
 
     img {
-      margin-right: 1.25rem;
+      margin-right: .5rem;
     }
   }
 
