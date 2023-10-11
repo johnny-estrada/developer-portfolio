@@ -1,10 +1,11 @@
 ---
-import Logo from "./ui/Logo.astro";
+import Logo from './ui/Logo.astro';
 ---
 
 <footer class="footer" role="contentinfo">
-  <div class="bg-pattern-rings2"></div>
   <div class="footer__container wrapper">
+    <div class="bg-pattern-rings2"></div>
+
     <div class="flex-item">
       <Logo />
       <p>
@@ -63,22 +64,22 @@ import Logo from "./ui/Logo.astro";
       </div>
     </div>
   </div>
-  <div class="footer__adoration flex-item">Built by Johnny Estrada - 2023</div>
+  <div class="footer__adoration">Built by Johnny Estrada - 2023</div>
 </footer>
 
 <style lang="scss">
   .footer {
-    position: relative;
     background: var(--neutral-800);
     padding: 60px 0 0px 0;
     // outline: green solid 1px;
 
     &__container {
+      position: relative;
       border-bottom: var(--white) solid 1px;
       // outline: blue solid 1px;
     }
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
       &__container {
         display: flex;
         border-bottom: var(--white) solid 1px;
@@ -95,6 +96,10 @@ import Logo from "./ui/Logo.astro";
     }
 
     &__adoration {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 60px;
       margin-top: 20px;
     }
 
@@ -104,11 +109,19 @@ import Logo from "./ui/Logo.astro";
       flex-direction: column;
       align-items: center;
       padding-bottom: 60px;
+
+      @media (min-width: 768px) {
+        & {
+          align-items: flex-start;
+          margin-right: 50px;
+          max-width: 400px;
+        }
+      }
     }
 
     .flex-ite {
+      padding: 0 20px 0 0;
       margin-bottom: 60px;
-
     }
 
     p {
@@ -117,6 +130,12 @@ import Logo from "./ui/Logo.astro";
       line-height: 1.625rem;
       text-align: center;
       margin-top: 0.625rem;
+
+      @media (min-width: 768px) {
+        & {
+          text-align: left;
+        }
+      }
     }
 
     .social-item {
@@ -159,15 +178,16 @@ import Logo from "./ui/Logo.astro";
     }
 
     img {
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 
   .bg-pattern-rings2 {
     position: absolute;
-    left: -310px;
-    top: 60%;
-    background-image: url("/icons/pattern-rings.svg");
+    top: 220px;
+    left: -250px;
+
+    background-image: url('/icons/pattern-rings.svg');
     background-repeat: no-repeat;
     width: 530px;
     height: 129px;
