@@ -90,9 +90,14 @@ import Logo from './ui/Logo.astro';
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding-bottom: 9.375rem;
       margin-bottom: 1.25rem;
       width: 100%;
+
+      @media (min-width: 900px) {
+        & {
+          padding-bottom: 9.375rem;
+        }
+      }
     }
 
     &__adoration {
