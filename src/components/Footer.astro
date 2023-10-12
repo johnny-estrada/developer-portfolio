@@ -31,7 +31,7 @@ import Logo from './ui/Logo.astro';
       <div class="flex-ite">
         <h4>SOCIAL</h4>
         <div class="social-item">
-          <img
+          <img 
             src="/icons/icon-location.svg"
             alt=""
             width="20px"
@@ -41,7 +41,7 @@ import Logo from './ui/Logo.astro';
         </div>
         <div class="social-item">
           <a href="https://github.com/johnny-estrada" class="footer_contact">
-            <img
+            <img class="icon-img" 
               src="/icons/icon-github.svg"
               alt=""
               width="20px"
@@ -52,7 +52,7 @@ import Logo from './ui/Logo.astro';
         </div>
         <div class="social-item">
           <a href="https://www.linkedin.com/in/estrada-johnny/">
-            <img
+            <img class="icon-img" 
               src="/icons/icon-linkedin.svg"
               alt=""
               width="20px"
@@ -169,13 +169,13 @@ import Logo from './ui/Logo.astro';
     }
 
     a:hover {
-      color: var(--accent-green-400);
+      filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(380%) hue-rotate(94deg) brightness(91%) contrast(96%);
       transition: color 200ms ease-in-out;
       text-decoration: underline;
     }
 
     a:focus {
-      color: var(--accent-green-400);
+      filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(380%) hue-rotate(94deg) brightness(91%) contrast(96%);
     }
 
     a:active {
