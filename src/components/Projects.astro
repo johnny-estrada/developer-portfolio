@@ -14,31 +14,34 @@
             width="540"
             height="auto"
           />
-          <img
-            src="/images/thumbnail-project-1-small.webp"
-            alt=""
-            max-width="100%"
-            height="auto"
-          />
+          <div class="contain">
+            <img
+              src="/images/thumbnail-project-1-small.webp"
+              class="image"
+              alt=""
+              max-width="100%"
+              height="auto"
+            />
+            <h4>BUG TRACKER WEB APP</h4>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JAVASCRIPT</li>
+            </ul>
+            <nav class="middle">
+              <a href="/bug-tracker">VIEW PROJECT</a>
+              <a href="https://github.com/johnny-estrada/bug-tracker-v2"
+                >VIEW CODE</a
+              >
+            </nav>
+          </div>
         </picture>
-
-        <h4>BUG TRACKER WEB APP</h4>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JAVASCRIPT</li>
-        </ul>
-
-        <nav>
-          <a href="/projects">VIEW PROJECT</a>
-          <a href="https://github.com/johnny-estrada/developer-portfolio"
-            >VIEW CODE</a
-          >
-        </nav>
       </div>
-      <div class="projects__card">
-        <picture>
+
+      <!-- <div class="projects__card">
+        <picture class="image">
           <source
+            class="image"
             media="(min-width: 600px)"
             srcset="/images/thumbnail-project-1-large.webp"
             width="540"
@@ -61,11 +64,11 @@
 
         <nav>
           <a href="/projects">VIEW PROJECT</a>
-          <a href="https://github.com/johnny-estrada/developer-portfolio"
+          <a href="https://github.com/johnny-estrada/bug-tracker-v2"
             >VIEW CODE</a
           >
         </nav>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -75,8 +78,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 80px;
+    padding: 80px 0;
     background: var(--neutral-500);
+
+    @media (min-width: 900px) {
+      & {
+        padding: 180px 0;
+      }
+    }
+
+    &__card {
+    }
 
     &__content {
       display: flex;
@@ -86,7 +98,7 @@
     }
 
     h2 {
-      margin-block: 80px;
+      margin-bottom: 80px;
       font-weight: 700;
       font-size: var(--main-heading);
       line-height: 40px;
@@ -142,6 +154,41 @@
         &:active {
           color: var(--text-white);
         }
+      }
+    }
+
+    /**************************/
+    /*** Project Images ***/
+    /************************/
+
+    @media (min-width: 900px) {
+      .contain {
+        position: relative;
+      }
+
+      .image {
+        opacity: 1;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+      }
+
+      .middle {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .contain:hover .image {
+        opacity: 0.3;
+      }
+
+      .contain:hover .middle {
+        opacity: 1;
       }
     }
   }
