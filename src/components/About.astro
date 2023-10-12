@@ -13,13 +13,13 @@
         <source
           media="(min-width: 600px)"
           srcset="/images/avatar-desktop.webp"
-          max-width="100%"
+          width="100%"
           height="auto"
         />
         <img
           src="/images/avatar-mobile.webp"
           alt="A man sitting behind a sunset, relaxed, with an amazing smile."
-          max-width="100%"
+          width="350px"
           height="auto"
         />
       </picture>
@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 80px 0;
+    padding: 80px 0;
 
     h2 {
       font-weight: 700;
@@ -57,7 +57,7 @@
 
     @media (min-width: 600px) {
       &.about {
-        margin-bottom: 100px;
+        padding: 100px 0;
       }
 
       h2 {
@@ -68,7 +68,7 @@
 
     @media (min-width: 900px) {
       &.about {
-        margin-bottom: 140px;
+        padding: 140px 0;
       }
 
       h2 {
@@ -89,12 +89,6 @@
     @media (min-width: 600px) {
       &__content {
         flex-direction: row;
-      }
-    }
-
-    @media (min-width: 900px) {
-      &__content {
-        margin-bottom: 180px;
       }
     }
 
@@ -123,9 +117,8 @@
 
     @media (min-width: 900px) {
       img {
-        margin-right: 32px;
-        // width: 100%;
         max-width: 540px;
+        padding-right: 42px;
       }
     }
 
@@ -185,6 +178,10 @@
       }
     }
 
+    /**************************/
+    /*** Background Images ***/
+    /************************/
+
     .bg-pattern-ring {
       background-image: url("/icons/pattern-rings.svg");
       background-repeat: no-repeat;
@@ -192,21 +189,21 @@
       height: 100%;
       position: absolute;
       left: 50%;
-      top: 90%;
+      top: 80%;
       z-index: -1;
 
       @media (min-width: 600px) {
         & {
-          width: 20%;
-          left: 80%;
-          top: 90%;
+          width: 25%;
+          left: 75%;
+          top: 70%;
         }
       }
       @media (min-width: 900px) {
         & {
           width: 25%;
           left: 75%;
-          top: 65%;
+          top: 70%;
         }
       }
     }
