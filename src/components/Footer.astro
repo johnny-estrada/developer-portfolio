@@ -31,7 +31,7 @@ import Logo from './ui/Logo.astro';
       <div class="flex-ite">
         <h4>SOCIAL</h4>
         <div class="social-item">
-          <img 
+          <img
             src="/icons/icon-location.svg"
             alt=""
             width="20px"
@@ -41,7 +41,8 @@ import Logo from './ui/Logo.astro';
         </div>
         <div class="social-item">
           <a href="https://github.com/johnny-estrada" class="footer_contact">
-            <img class="icon-img" 
+            <img
+              class="icon-img"
               src="/icons/icon-github.svg"
               alt=""
               width="20px"
@@ -52,7 +53,8 @@ import Logo from './ui/Logo.astro';
         </div>
         <div class="social-item">
           <a href="https://www.linkedin.com/in/estrada-johnny/">
-            <img class="icon-img" 
+            <img
+              class="icon-img"
               src="/icons/icon-linkedin.svg"
               alt=""
               width="20px"
@@ -127,6 +129,7 @@ import Logo from './ui/Logo.astro';
     .flex-ite {
       padding: 0 20px 0 0;
       margin-bottom: 60px;
+      z-index: 1;
     }
 
     p {
@@ -169,13 +172,15 @@ import Logo from './ui/Logo.astro';
     }
 
     a:hover {
-      filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(380%) hue-rotate(94deg) brightness(91%) contrast(96%);
+      filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(380%)
+        hue-rotate(94deg) brightness(91%) contrast(96%);
       transition: color 200ms ease-in-out;
       text-decoration: underline;
     }
 
     a:focus {
-      filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(380%) hue-rotate(94deg) brightness(91%) contrast(96%);
+      filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(380%)
+        hue-rotate(94deg) brightness(91%) contrast(96%);
     }
 
     a:active {
@@ -189,13 +194,17 @@ import Logo from './ui/Logo.astro';
 
   .bg-pattern-rings2 {
     position: absolute;
-    top: 220px;
+    top: 450px;
     left: -250px;
 
     background-image: url('/icons/pattern-rings.svg');
     background-repeat: no-repeat;
     width: 530px;
     height: 129px;
-    z-index: 1;
+
+    @media (min-width: 600px) {
+      top: 220px;
+      left: -250px;
+    }
   }
 </style>
