@@ -1,33 +1,190 @@
 ---
 ---
 
-<section class="contact">
+<section id="contact">
+  <h2>Contact</h2>
   <div class="bg-ring-pattern"></div>
-  <header>
-    <h1>Contact Me</h1>
-  </header>
-  <div class="wrapper contact__content">
-    <h2>Available for projects</h2>
-    <p>
-      Use the form to get in touch so we can begin the journey of getting your
-      business a proper, effective website for your business or organization.
-    </p>
+  <div class="contact wrapper">
+    <div class="contact__left">
+      <h3><span>Available</span> for projects</h3>
+      <p class="contact__text">
+        I would love to hear about your project and how I could help. Please
+        fill in the form, and I'll get back to you as soon as possible.
+      </p>
 
-    <div class="social">
-      <a class="social__link">
-        <img src="/icons/icon-linkedin.svg" />
-        <p>Connect with me</p>
-      </a>
-      <a class="social__link">
-        <img src="/icons/icon-github.svg" />
-        <p>Check out my projects</p>
-      </a>
+      <div class="social">
+        <a
+          href="https://www.linkedin.com/in/estrada-johnny/"
+          class="social__link"
+        >
+          <img src="/icons/icon-linkedin.svg" width="20" height="20" />
+          <p>Connect with me</p>
+        </a>
+        <a href="https://github.com/johnny-estrada" class="social__link">
+          <img src="/icons/icon-github.svg" width="20" height="20" />
+          <p>Check out my projects</p>
+        </a>
+      </div>
     </div>
-    <form>
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <button>Send Message</button>
-    </form>
+
+    <div class="contact__right">
+      <form
+        action="https://formsubmit.co/4f078ea31d55aa27c534cbbfa11ffd99"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="hidden" name="_captcha" value="true" />
+        <input type="hidden" name="_next" value="https://johnnyestrada.dev/thank-you.html" />
+        <textarea rows="5" name="message" placeholder="Message" required
+        ></textarea>
+        <div class="button">
+          <button type="submit">SEND MESSAGE</button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
+
+<style lang="scss">
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0 80px 0;
+
+    @media (min-width: 900px) {
+      align-items: start;
+      flex-direction: row;
+      padding: 120px 0 120px 0;
+
+      &__left {
+        margin-right: 42px;
+      }
+
+      &__text {
+        max-width: 36ch;
+      }
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: var(--step-0);
+      letter-spacing: -1px;
+      text-align: center;
+      margin: 0 auto 10px auto;
+    }
+
+    &__text {
+      color: var(--stone-300);
+      flex-wrap: wrap;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: 900px) {
+      .contact__text {
+        text-align: left;
+      }
+    }
+
+    span {
+      color: var(--accent-green-400);
+    }
+
+    form {
+      background-color: hsl(0, 0%, 14%);
+      padding: 42px 25px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      height: auto;
+      max-width: 445px;
+
+      input,
+      textarea {
+        background-color: hsl(0, 0%, 85%, 12%);
+        border-radius: 5px 5px 0px 0px;
+        color: white;
+        padding: 5px;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #f2f2f2;
+        margin-bottom: 20px;
+      }
+
+      button {
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--text-white);
+        border-bottom: 2px solid var(--accent-green-400);
+        padding-bottom: 10px;
+
+        &:hover {
+          color: var(--accent-green-400);
+          transition: color 200ms ease-in-out;
+        }
+
+        &:focus {
+          color: var(--accent-green-400);
+        }
+
+        &:active {
+          color: var(--text-white);
+        }
+      }
+
+      .button {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 80px;
+    font-weight: 700;
+    font-size: var(--main-heading);
+    line-height: 40px;
+    letter-spacing: -1.13636px;
+
+    @media (min-width: 900px) {
+      & {
+        margin-top: 120px;
+      }
+    }
+  }
+
+  .social {
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    &__link:nth-child(2) {
+      margin-bottom: 30px;
+    }
+
+    &__link:hover {
+      filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(380%)
+        hue-rotate(94deg) brightness(91%) contrast(96%);
+      transition: color 200ms ease-in-out;
+      text-decoration: underline;
+    }
+
+    &__link:focus {
+      filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(380%)
+        hue-rotate(94deg) brightness(91%) contrast(96%);
+    }
+
+    @media (min-width: 900px) {
+      &__link {
+        justify-content: flex-start;
+      }
+    }
+  }
+</style>
