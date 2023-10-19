@@ -73,12 +73,10 @@ import Logo from './ui/Logo.astro';
   .footer {
     background: var(--neutral-800);
     padding: 60px 0 0px 0;
-    // outline: green solid 1px;
 
     &__container {
       position: relative;
       border-bottom: var(--white) solid 1px;
-      // outline: blue solid 1px;
     }
 
     @media (min-width: 768px) {
@@ -120,8 +118,14 @@ import Logo from './ui/Logo.astro';
       @media (min-width: 768px) {
         & {
           align-items: flex-start;
-          margin-right: 50px;
+          margin-right: 100px;
           max-width: 400px;
+        }
+      }
+
+      @media (min-width: 900px) {
+        & {
+          margin-right: 200px;
         }
       }
     }
