@@ -1,96 +1,6 @@
 ---
 ---
 
-<!-- <div class="hamburger">
-  <span class="bar1"></span>
-  <span class="bar2"></span>
-  <span class="bar3"></span>
-  <nav class="mobile-menu">
-    <a class="link" href="/" aria-current="page">Home</a>
-    <a class="link" href="/about">About</a>
-    <a class="link" href="/#projects">Projects</a>
-    <a class="link" href="/#contact">Contact</a>
-  </nav>
-</div>
-
-<style lang="scss">
-  .hamburger {
-    cursor: pointer;
-
-    span {
-      display: block;
-      width: 2.5rem;
-      min-height: 0.25rem;
-      margin-bottom: 0.5rem;
-      background-color: var(--white);
-    }
-
-    span:last-child {
-      margin-bottom: 0;
-    }
-
-    .open .bar1 {
-      -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-      transform: rotate(-45deg) translate(-6px, 6px);
-    }
-
-    .open .bar2 {
-      opacity: 0;
-    }
-
-    .open .bar3 {
-      -webkit-transform: rotate(45deg) translate(-6px, -8px);
-      transform: rotate(45deg) translate(-6px, -8px);
-    }
-
-    .open .mobile-menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-    }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      background-color: var(--neutral-800);
-      position: absolute;
-      z-index: 99;
-      top: 60px;
-      left: 0;
-      height: calc(100vh - 450px);
-      width: 100%;
-    }
-  }
-</style>
-
-<script>
-  const menu = document.querySelector('.menu');
-  const menuItems = document.querySelectorAll('.menuItem');
-  const hamburger = document.querySelector('.hamburger');
-  const closeIcon = document.querySelector('.closeIcon');
-  const menuIcon = document.querySelector('.menuIcon');
-
-  function toggleMenu() {
-    if (menu.classList.contains('showMenu')) {
-      menu.classList.remove('showMenu');
-      closeIcon.style.display = 'none';
-      menuIcon.style.display = 'block';
-    } else {
-      menu.classList.add('showMenu');
-      closeIcon.style.display = 'block';
-      menuIcon.style.display = 'none';
-    }
-  }
-
-  hamburger.addEventListener('click', toggleMenu);
-
-  menuItems.forEach(function (menuItem) {
-    menuItem.addEventListener('click', toggleMenu);
-  });
-</script> -->
 <nav role="navigation">
   <div id="menuToggle">
     <input id="menuInput" type="checkbox" />
@@ -112,18 +22,24 @@
   const setMenu = document.getElementById('menu');
   const checkBox = document.getElementById('menuInput');
   const setOverflow = document.getElementById('body');
+  const links = document.querySelectorAll('ul li');
 
   toggle.addEventListener('click', (e) => {
     e.stopPropagation();
 
-    if (checkBox.checked) {
+    if (checkBox.checked && setMenu.style.display === 'none') {
       setMenu.style.display = 'block';
       setOverflow.style.overflow = 'hidden';
     } else {
       setMenu.style.display = 'none';
       setOverflow.style.overflow = 'scroll';
+      checkBox.getAttribute('checked')
+      checkBox.setAttribute('checked', 'false')
+      checkBox.checked = false;
     }
   });
+
+
 </script>
 
 <style lang="scss">
