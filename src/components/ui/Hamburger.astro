@@ -113,10 +113,10 @@
   toggle.addEventListener('click', (e) => {
     if (setMenu.style.display === 'block') {
       setMenu.style.display = 'none';
-      setMenu.style.position = "absolute"
+      toggle.style.position = "absolute"
     } else {
       setMenu.style.display = 'block'
-      setMenu.style.position = "fixed"
+      toggle.style.position = "fixed"
     }
 
     e.stopPropagation();
