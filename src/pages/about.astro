@@ -1,10 +1,85 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import CallToAction from "../components/CallToAction.astro";
+import Layout from '../layouts/Layout.astro';
+import CallToAction from '../components/ui/CallToAction.astro';
 ---
 
-<Layout pageTitle="Johnny Estrada | Front-End Focused, Full Stack Web Developer">
-    <main role="main">
+<Layout
+  pageTitle="Johnny Estrada | Front-End Focused, Full Stack Web Developer"
+>
+  <main role="main" class="wrapper">
+    <h1>About Me</h1>
+    <!-- <div class="about__content">
+      <div class="about__images">
+        <img src="/images/avatar-desktop.webp" width="500" height="500" />
+        <img src="/images/avatar-desktop.webp" width="500" height="500" />
+      </div>
+
+      <div class="about__text">
+        <p>
+          Hey there! I'm Johnny, a passionate web developer with a fervor for
+          creating digital magic through the art of coding. My journey in the
+          world of programming began when I was just a young dreamer, eager to
+          bring my visions to life on the digital canvas. However, back then, I
+          often found myself overwhelmed, not knowing where to begin. But I was
+          determined, and that determination would pave the way for my
+          remarkable journey.
+        </p>
+        <p>
+          During my college years, I dipped my toes into the basics of coding,
+          but the spark truly ignited when I was granted the incredible
+          opportunity to take some time off work and dive headfirst into the
+          world of code. I vividly remember enrolling in a Udemy class online,
+          and boy, was it tough! The imposter syndrome was very real, and it
+          made me question my abilities at every turn. Yet, I persevered.
+        </p>
+        <p>
+          As the days turned into weeks and the weeks into months, I embarked on
+          an incredible journey of self-discovery. Along the way, I stumbled
+          upon a thriving online community that proved to be the wind in my
+          sails, helping me navigate the many roadblocks that crossed my path.
+          Today, I can proudly say that I can craft websites and applications
+          using a diverse range of technologies, including Astro, React, and
+          JavaScript. The high hurdles I once faced are now stepping stones to
+          my success.
+        </p>
+        <p>
+          Every single day, I find myself brimming with excitement, eager to
+          learn something new and witness the improvements I make in my craft.
+          The journey of continuous learning fuels my passion and drives me to
+          achieve new heights in the ever-evolving world of web development.
+        </p>
+        <p>
+          When I'm not engrossed in the world of code, you'll often find me
+          pursuing two of my other great passions. Firstly, I'm an avid 3D
+          printing enthusiast, constantly amazed by the limitless possibilities
+          this technology offers. Secondly, there's nothing I enjoy more than
+          hitting the serene waters with my faithful companion, Luna, for a
+          peaceful paddleboarding session in the bay.
+        </p>
+      </div>
+    </div> -->
+
     <CallToAction />
-    </main>
-  </Layout>
+  </main>
+</Layout>
+
+<style lang="scss">
+  h1 {
+    text-align: center;
+  }
+
+  .about__content {
+  }
+
+  .about__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: var(--stone-300);
+    padding-bottom: 20px;
+  }
+</style>
