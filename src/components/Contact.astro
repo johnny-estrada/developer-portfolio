@@ -53,6 +53,10 @@
     align-items: center;
     padding: 80px 0 80px 0;
 
+    &__left {
+      margin-bottom: 20px;
+    }
+
     @media (min-width: 900px) {
       align-items: start;
       flex-direction: row;
@@ -79,7 +83,7 @@
       color: var(--stone-300);
       flex-wrap: wrap;
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
     }
 
     @media (min-width: 900px) {
@@ -187,6 +191,7 @@
     @media (min-width: 900px) {
       &__link {
         justify-content: flex-start;
+        width: fit-content;
       }
     }
   }
