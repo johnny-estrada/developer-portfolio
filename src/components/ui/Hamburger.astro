@@ -110,15 +110,18 @@
 <script>
   const toggle = document.getElementById('menuToggle');
   const setMenu = document.getElementById('menu');
-  const checkBox = document.getElementById('menuInput')
+  const checkBox = document.getElementById('menuInput');
+  const setOverflow = document.getElementById('body');
 
   toggle.addEventListener('click', (e) => {
     e.stopPropagation();
 
     if (checkBox.checked) {
       setMenu.style.display = 'block';
+      setOverflow.style.overflow = 'hidden';
     } else {
       setMenu.style.display = 'none';
+      setOverflow.style.overflow = 'scroll';
     }
   });
 </script>
@@ -143,9 +146,9 @@
 
   #menuToggle {
     display: flex;
-    position: fixed;
-    top: 30px;
-    right: 32px;
+    position: relative;
+    top: 3px;
+    right: 3px;
     flex-direction: column;
     z-index: 3;
     -webkit-user-select: none;
@@ -157,8 +160,8 @@
     width: 41px;
     height: 32px;
     position: absolute;
-    top: -10px;
-    right: -6px;
+    top: -5px;
+    right: -1px;
     cursor: pointer;
     opacity: 0;
     z-index: 4;
@@ -166,9 +169,9 @@
 
   #menuToggle span {
     display: flex;
-    width: 29px;
-    height: 2px;
-    margin-bottom: 5px;
+    width: 2.5rem;
+    min-height: 2px;
+    margin-bottom: 0.5rem;
     background: #ffffff;
     border-radius: 3px;
     z-index: 3;
