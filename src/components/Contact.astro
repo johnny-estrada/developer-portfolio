@@ -32,6 +32,7 @@
         action="https://formsubmit.co/4f078ea31d55aa27c534cbbfa11ffd99"
         method="POST"
       >
+        <label for="name" class="visually-hidden">NAME</label>
         <input
           type="text"
           name="name"
@@ -39,6 +40,7 @@
           aria-label="name"
           required
         />
+        <label for="email" class="visually-hidden">EMAIL</label>
         <input
           type="email"
           name="email"
@@ -46,12 +48,14 @@
           aria-label="email"
           required
         />
+        <label for="_captcha" class="visually-hidden" />
         <input
           type="hidden"
           name="_captcha"
           value="true"
           aria-label="captcha"
         />
+        <label for="message" class="visually-hidden">MESSAGE</label>
         <textarea
           rows="5"
           name="message"
