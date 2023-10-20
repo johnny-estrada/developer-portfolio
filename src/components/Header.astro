@@ -1,7 +1,7 @@
 ---
-import Logo from "./ui/Logo.astro";
-import Hamburger from "./ui/Hamburger.astro";
-import Navigation from "./ui/Navigation.astro";
+import Logo from './ui/Logo.astro';
+import Hamburger from './ui/Hamburger.astro';
+import Navigation from './ui/Navigation.astro';
 ---
 
 <header id="#top" class="header" role="banner">
@@ -28,18 +28,26 @@ import Navigation from "./ui/Navigation.astro";
       align-items: center;
       padding-top: 1.5625rem;
     }
+
     &__desktop-nav {
-      margin-right: 24px;
       display: flex;
       gap: 2rem;
-    }
-    @media (max-width: 899px) {
-      &__desktop-nav {
-        display: none;
+      margin-right: 24px;
+
+      @media (max-width: 699px) {
+        & {
+          display: none;
+          margin-right: 24px;
+        }
+      }
+      @media (max-width: 899px) {
+        & {
+          margin-right: 0px;
+        }
       }
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 700px) {
       &__mobile-nav {
         display: none;
       }
