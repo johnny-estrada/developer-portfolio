@@ -4,10 +4,11 @@ import CallToAction from '../components/ui/CallToAction.astro';
 ---
 
 <Layout
-  pageTitle="Johnny Estrada | Front-End Focused, Full Stack Web Developer"
+  pageTitle="About | Hey there! I'm Johnny, a Front-End web developer with a fervor for creating digital magic through the art of coding."
 >
   <main role="main" class="wrapper">
     <h1>About Me</h1>
+    <p>Coming Soon.</p>
     <!-- <div class="about__content">
       <div class="about__images">
         <img src="/images/avatar-desktop.webp" width="500" height="500" />
@@ -16,8 +17,9 @@ import CallToAction from '../components/ui/CallToAction.astro';
 
       <div class="about__text">
         <p>
-          Hey there! I'm Johnny, a passionate web developer with a fervor for
-          creating digital magic through the art of coding. My journey in the
+          Hey there! I'm Johnny, a Front-End web developer with a fervor for
+          creating digital magic through the art of coding. In other words, I love to build cool thingsanchoer here.
+          My journey in the
           world of programming began when I was just a young dreamer, eager to
           bring my visions to life on the digital canvas. However, back then, I
           often found myself overwhelmed, not knowing where to begin. But I was
@@ -65,7 +67,12 @@ import CallToAction from '../components/ui/CallToAction.astro';
 
 <style lang="scss">
   h1 {
+    font-weight: 700;
+    font-size: var(--main-heading);
     text-align: center;
+    line-height: 2.5rem;
+    letter-spacing: -0.0710225rem;
+    margin-top: 120px;
   }
 
   .about__content {
@@ -79,7 +86,11 @@ import CallToAction from '../components/ui/CallToAction.astro';
   }
 
   p {
+    font-size: var(--body-text);
     color: var(--stone-300);
-    padding-bottom: 20px;
+    text-align: center;
+    line-height: 26px;
+    color: #d9d9d9;
+    margin-top: 80px;
   }
 </style>
