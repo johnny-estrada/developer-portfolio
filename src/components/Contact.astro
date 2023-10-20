@@ -6,7 +6,7 @@
   <div class="bg-ring-pattern"></div>
   <div class="contact wrapper">
     <div class="contact__left">
-      <h3><span>Available</span> for projects</h3>
+      <h3>Available for projects</h3>
       <p class="contact__text">
         I would love to hear about your project and how I could help. Please
         fill in the form, and I'll get back to you as soon as possible.
@@ -32,11 +32,33 @@
         action="https://formsubmit.co/4f078ea31d55aa27c534cbbfa11ffd99"
         method="POST"
       >
-        <input type="text" name="name" placeholder="Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <input type="hidden" name="_captcha" value="true" />
-        <textarea rows="5" name="message" placeholder="Message" required
-        ></textarea>
+        <input
+          type="text"
+          name="name"
+          placeholder="NAME"
+          aria-label="name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="EMAIL"
+          aria-label="email"
+          required
+        />
+        <input
+          type="hidden"
+          name="_captcha"
+          value="true"
+          aria-label="captcha"
+        />
+        <textarea
+          rows="5"
+          name="message"
+          placeholder="MESSAGE"
+          aria-label="message"
+          required></textarea>
+
         <div class="button">
           <button type="submit">SEND MESSAGE</button>
         </div>
@@ -76,14 +98,14 @@
       font-size: var(--step-0);
       letter-spacing: -1px;
       text-align: center;
-      margin: 0 auto 10px auto;
+      // margin: 0 auto 10px auto;
     }
 
     &__text {
       color: var(--stone-300);
       flex-wrap: wrap;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     @media (min-width: 900px) {
@@ -104,19 +126,20 @@
     form {
       background-color: hsl(0, 0%, 14%);
       padding: 42px 25px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid hsla(0, 0%, 100%, 0.055);
       height: auto;
       max-width: 445px;
 
       input,
       textarea {
-        background-color: hsl(0, 0%, 85%, 12%);
+        // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+        background-color: hsl(0, 0%, 84%);
         border-radius: 5px 5px 0px 0px;
-        color: white;
+        color: var(--neutral-800);
         padding: 5px;
         width: 100%;
-        border: none;
-        border-bottom: 2px solid #f2f2f2;
+        border: 1px solid hsla(0, 0%, 100%, 0.055);
+        border-bottom: 2px solid #575757;
         margin-bottom: 20px;
       }
 
