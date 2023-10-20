@@ -1,0 +1,20 @@
+User-agent: Googlebot
+
+User-agent: Googlebot-Image
+
+User-agent: Googlebot-Mobile
+
+User-agent: Googlebot-News
+
+User-agent: Bingbot
+
+User-agent: Baiduspider
+
+User-agent: msnbot
+
+User-agent: slurp     (Yahoo)
+
+Disallow: /about/
+Disallow: /bug-tracker/
+Disallow: /projects/bug-tracker/
+Disallow: /projects/
