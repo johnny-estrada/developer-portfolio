@@ -139,7 +139,6 @@ footer, header, hgroup, menu, nav, section {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  white-space: nowrap;
   width: 1px;
 }
 
