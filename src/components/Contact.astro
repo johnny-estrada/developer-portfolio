@@ -1,4 +1,5 @@
 ---
+import ContactForm from "./form/ContactForm.astro";
 ---
 
 <section id="contact">
@@ -28,45 +29,7 @@
     </div>
 
     <div class="contact__right">
-      <form
-        action="https://formsubmit.co/4f078ea31d55aa27c534cbbfa11ffd99"
-        method="POST"
-      >
-        <label for="name" class="visually-hidden">NAME</label>
-        <input
-          type="text"
-          name="name"
-          placeholder="NAME"
-          aria-label="name"
-          required
-        />
-        <label for="email" class="visually-hidden">EMAIL</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="EMAIL"
-          aria-label="email"
-          required
-        />
-        <label for="_captcha" class="visually-hidden" />
-        <input
-          type="hidden"
-          name="_captcha"
-          value="true"
-          aria-label="captcha"
-        />
-        <label for="message" class="visually-hidden">MESSAGE</label>
-        <textarea
-          rows="5"
-          name="message"
-          placeholder="MESSAGE"
-          aria-label="message"
-          required></textarea>
-
-        <div class="button">
-          <button type="submit">SEND MESSAGE</button>
-        </div>
-      </form>
+     <ContactForm />
     </div>
   </div>
 </section>
@@ -127,53 +90,7 @@
       color: var(--accent-green-400);
     }
 
-    form {
-      background-color: hsl(0, 0%, 14%);
-      padding: 42px 25px;
-      border: 1px solid hsla(0, 0%, 100%, 0.055);
-      height: auto;
-      max-width: 445px;
-
-      input,
-      textarea {
-        // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-        background-color: hsl(0, 0%, 84%);
-        border-radius: 5px 5px 0px 0px;
-        color: var(--neutral-800);
-        padding: 5px;
-        width: 100%;
-        border: 1px solid hsla(0, 0%, 100%, 0.055);
-        border-bottom: 2px solid #575757;
-        margin-bottom: 20px;
-      }
-
-      button {
-        cursor: pointer;
-        background: none;
-        border: none;
-        color: var(--text-white);
-        border-bottom: 2px solid var(--accent-green-400);
-        padding-bottom: 10px;
-
-        &:hover {
-          color: var(--accent-green-400);
-          transition: color 200ms ease-in-out;
-        }
-
-        &:focus {
-          color: var(--accent-green-400);
-        }
-
-        &:active {
-          color: var(--text-white);
-        }
-      }
-
-      .button {
-        display: flex;
-        justify-content: flex-end;
-      }
-    }
+    
   }
 
   h2 {
