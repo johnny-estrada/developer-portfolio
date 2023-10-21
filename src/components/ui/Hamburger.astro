@@ -4,7 +4,12 @@
 <nav role="navigation" aria-label="Main nav">
   <div id="menuToggle">
     <label for="checkbox" class="visually-hidden">Open/Close</label>
-    <input name="checkbox" id="menuInput" type="checkbox" aria-label="checkbox" />
+    <input
+      name="checkbox"
+      id="menuInput"
+      type="checkbox"
+      aria-label="checkbox"
+    />
     <span></span>
     <span></span>
     <span></span>
@@ -34,13 +39,11 @@
     } else {
       setMenu.style.display = 'none';
       setOverflow.style.overflow = 'scroll';
-      checkBox.getAttribute('checked')
-      checkBox.setAttribute('checked', 'false')
+      checkBox.getAttribute('checked');
+      checkBox.setAttribute('checked', 'false');
       checkBox.checked = false;
     }
   });
-
-
 </script>
 
 <style lang="scss">

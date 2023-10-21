@@ -1,63 +1,61 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-    <div class="wrapper not-found">
-        <h1>Page not found (404)</h1>
-        <p>Looks like the page your requested doesn't exist.</p>
-        <p><a href="/">&larr; back home</a></p>
-    </div>
+  <div class="wrapper not-found">
+    <h1>Page not found (404)</h1>
+    <p>Looks like the page your requested doesn't exist.</p>
+    <p><a href="/">&larr; back home</a></p>
+  </div>
 </Layout>
 
 <style lang="scss">
-     h1 {
-      position: relative;
-      font-weight: 700;
-      font-size: 40px;
-      text-align: center;
-      line-height: 2.5rem;
-      letter-spacing: -0.0710225rem;
-      margin-bottom: 24px;
+  h1 {
+    position: relative;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    line-height: 2.5rem;
+    letter-spacing: -0.0710225rem;
+    margin-bottom: 24px;
+  }
+
+  p {
+    color: var(--stone-300);
+    font-size: var(--body-text);
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .not-found {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a {
+    &:hover {
+      color: var(--accent-green-400);
+      box-shadow: 0px 0px 50px 1px rgba(78, 225, 160, 0.25);
+      translate: 2px 2px;
+      transition: all 300ms ease-in-out;
+      transform: scale(0.95);
     }
 
-    p {
-        color: var(--stone-300);
-      font-size: var(--body-text);
-      line-height: 26px;
-      text-align: center;
-      margin-bottom: 32px;
+    &:focus {
+      border: none;
+      color: var(--accent-green-400);
+      box-shadow: 0px 0px 50px 1px rgba(78, 225, 160, 0.25);
+      transform: scale(0.95);
     }
 
-    .not-found {
-        margin: 100px auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    &:active {
+      border: none;
+      color: hsl(0, 0%, 100%);
+      transform: scale(1.1);
     }
-
-    a {
-
-      &:hover {
-        color: var(--accent-green-400);
-        box-shadow: 0px 0px 50px 1px rgba(78, 225, 160, 0.25);
-        translate: 2px 2px;
-        transition: all 300ms ease-in-out;
-        transform: scale(0.95);
-      }
-
-      &:focus {
-        border: none;
-        color: var(--accent-green-400);
-        box-shadow: 0px 0px 50px 1px rgba(78, 225, 160, 0.25);
-        transform: scale(0.95);
-      }
-
-      &:active {
-        border: none;
-        color: hsl(0, 0%, 100%);
-        transform: scale(1.1);
-      }
-    }
-  
+  }
 </style>
