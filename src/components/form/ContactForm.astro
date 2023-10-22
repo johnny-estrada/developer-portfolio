@@ -40,33 +40,36 @@
 <script>
   const validateForm = (formSelector) => {
     const formElement = document.querySelector(formSelector);
-    console.log(formSelector)
-  }
+    console.log(formSelector);
+  };
 
   validateForm();
-
 </script>
 
 <style lang="scss">
   form {
     background-color: hsl(0, 0%, 14%);
-    padding: 42px 25px;
+    padding: 32px 25px 70px;
     border: 1px solid hsla(0, 0%, 100%, 0.055);
     height: auto;
     max-width: 445px;
 
     input,
     textarea {
-      // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-      background-color: hsl(0, 0%, 84%);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+      background-color: #c8c8c8;
+      border: 1px solid #9c9c9c;
       border-radius: 5px 5px 0px 0px;
       color: var(--neutral-800);
       padding: 5px;
       width: 100%;
-      border: 1px solid hsla(0, 0%, 100%, 0.055);
-      border-bottom: 2px solid #575757;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      outline: none;
     }
+
+    input:focus, textarea:focus {
+        outline: 1px solid var(--accent-green-400);
+      }
 
     button {
       cursor: pointer;
