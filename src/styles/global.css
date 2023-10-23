@@ -32,9 +32,6 @@
   --step-0: clamp(2.00rem, calc(1.65rem + 1.50vw), 3.00rem);
 }
 
-/******************/
-/*** CSS Reset ***/
-/****************/
 /* space-grotesk-500 - latin */
 @font-face {
   font-display: swap; 
@@ -53,6 +50,9 @@
   src: url('../assets/fonts/space-grotesk-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/******************/
+/*** CSS Reset ***/
+/****************/
 
 *,
 *::before,
