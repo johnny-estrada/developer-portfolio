@@ -30,18 +30,15 @@
   const setOverflow = document.getElementById('body');
   const links = document.querySelectorAll('ul li');
 
-  toggle.addEventListener('click', (e) => {
+  toggle.addEventListener('change', (e) => {
     e.stopPropagation();
 
-    if (checkBox.checked && setMenu.style.display === 'none') {
+    if (checkBox.checked) {
       setMenu.style.display = 'block';
       setOverflow.style.overflow = 'hidden';
     } else {
       setMenu.style.display = 'none';
       setOverflow.style.overflow = 'scroll';
-      checkBox.getAttribute('checked');
-      checkBox.setAttribute('checked', 'false');
-      checkBox.checked = false;
     }
   });
 </script>
