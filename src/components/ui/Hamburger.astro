@@ -28,7 +28,7 @@
   const setMenu = document.getElementById('menu');
   const checkBox = document.getElementById('menuInput');
   const setOverflow = document.getElementById('body');
-  const links = document.querySelectorAll('ul li');
+  const links = document.querySelectorAll('ul li a');
 
   toggle.addEventListener('change', (e) => {
     e.stopPropagation();
@@ -40,6 +40,14 @@
       setMenu.style.display = 'none';
       setOverflow.style.overflow = 'scroll';
     }
+  });
+
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      setMenu.style.display = 'none';
+      setOverflow.style.overflow = 'scroll';
+      checkBox.checked = false;
+    });
   });
 </script>
 
