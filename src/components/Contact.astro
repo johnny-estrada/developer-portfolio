@@ -4,8 +4,10 @@ import ContactForm from './form/ContactForm.astro';
 
 <section id="contact">
   <h2>CONTACT</h2>
+
   <div class="bg-ring-pattern"></div>
   <div class="contact wrapper">
+    
     <div class="contact__left">
       <h3>Available for projects</h3>
       <p class="contact__text">
@@ -92,7 +94,7 @@ import ContactForm from './form/ContactForm.astro';
 
   h2 {
     text-align: center;
-    margin-top: 80px;
+    margin-bottom: 80px;
     font-weight: 700;
     font-size: var(--main-heading);
     line-height: 40px;
@@ -100,7 +102,6 @@ import ContactForm from './form/ContactForm.astro';
 
     @media (min-width: 900px) {
       & {
-        margin-top: 0;
         padding-top: 120px;
       }
     }
@@ -113,6 +114,7 @@ import ContactForm from './form/ContactForm.astro';
       align-items: center;
       gap: 10px;
       margin-bottom: 20px;
+      text-decoration: underline;
     }
 
     &__link:nth-child(2) {
