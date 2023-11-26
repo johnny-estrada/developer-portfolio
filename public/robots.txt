@@ -4,3 +4,4 @@ Disallow: /about/
 Disallow: /bug-tracker/
 Disallow: /projects/bug-tracker/
 Disallow: /projects/
+Disallow: /contact/
