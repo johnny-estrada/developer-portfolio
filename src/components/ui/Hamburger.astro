@@ -104,6 +104,10 @@
     transform-origin: 5px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
       background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    -webkit-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    -moz-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
 
   #menuToggle span:first-child {
@@ -115,17 +119,24 @@
   }
 
   #menuToggle input:checked ~ span {
+    background: #fff;
     opacity: 1;
     transform: rotate(45deg) translate(-3px, -1px);
-    background: #fff;
+    -webkit-transform: rotate(45deg) translate(-3px, -1px);
+    -moz-transform: rotate(45deg) translate(-3px, -1px);
   }
+
   #menuToggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+    -moz-transform: rotate(0deg) scale(0.2, 0.2);
   }
 
   #menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+    -moz-transform: rotate(-45deg) translate(0, -1px);
   }
 
   #menu li {
@@ -149,6 +160,8 @@
     font-size: 1.5em;
     font-weight: 400;
     transition: 200ms;
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms;
     z-index: 1;
   }
 
