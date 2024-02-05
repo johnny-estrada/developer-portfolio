@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout>
+<Layout pageTitle="Page Not Found">
   <div class="wrapper not-found">
     <h1>Page not found (404)</h1>
     <p>Looks like the page your requested doesn't exist.</p>
@@ -38,8 +38,8 @@ import Layout from '../layouts/Layout.astro';
 
   @media (min-width: 900px) {
     .not-found {
-    margin: 80px auto;
-  }
+      margin: 80px auto;
+    }
   }
 
   a {
