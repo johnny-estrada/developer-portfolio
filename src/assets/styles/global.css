@@ -38,7 +38,7 @@
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 500;
-  src: url('../assets/fonts/space-grotesk-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/space-grotesk-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* space-grotesk-700 - latin */
@@ -47,7 +47,7 @@
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 700;
-  src: url('../assets/fonts/space-grotesk-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/space-grotesk-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /******************/
