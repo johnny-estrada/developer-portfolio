@@ -87,6 +87,8 @@
     &__content {
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
       min-width: 100%;
       margin-left: 0;
@@ -113,7 +115,6 @@
 
     @media (min-width: 600px) {
       img {
-        padding-right: 30px;
         max-width: 100%;
         max-height: 400px;
       }
@@ -123,7 +124,13 @@
       img {
         max-width: 540px;
         max-height: 500px;
-        padding-right: 42px;
+       
+      }
+    }
+
+    @media (min-width: 1043px) {
+      img {
+        padding-right: 30px;
       }
     }
 
@@ -140,7 +147,13 @@
       color: var(--stone-300);
       font-size: var(--body-text);
       line-height: 1.7;
-      margin: 0 auto 32px auto;
+      margin: 0 auto 20px auto;
+    }
+
+    @media (min-width: 900px) {
+      p {
+        max-width: 500px;
+      }
     }
 
     @media (min-width: 600px) {
