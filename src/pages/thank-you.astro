@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout pageTitle="Thank You">
+  <section id="thank-you">
+    <div class="thank-you wrapper">
+      <div class="bg-ring-pattern"></div>
+      <div class="thank-you__left">
+        <h2>Thank you for your message!</h2>
+        <p class="thank-you__text">
+          This is to confirm that we have received your message and I'll be back
+          in touch within 48 hours to discuss your Project.
+        </p>
+
+        <div class="social">
+          <a
+            href="https://www.linkedin.com/in/estrada-johnny/"
+            class="social__link"
+          >
+            <img src="/icons/icon-linkedin.svg" width="20" height="20" alt="" />
+            <p>Connect with me</p>
+          </a>
+          <a href="https://github.com/johnny-estrada" class="social__link">
+            <img src="/icons/icon-github.svg" width="20" height="20" alt="" />
+            <p>Check out my projects</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="thank-you__right">
+        <picture>
+          <source
+            media="(min-width: 900px)"
+            srcset="/images/hero-image-desktop.webp"
+          />
+
+          <source
+            media="(min-width: 600px)"
+            srcset="/images/hero-image-tablet.webp"
+          />
+
+          <img
+            class="img"
+            src="/images/hero-image-mobile.webp"
+            alt="Black and white picture of Johnny Estrada."
+            width="174"
+            height="383"
+          />
+        </picture>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style lang="scss">
+  .img {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    translate: -50%;
+    z-index: -1;
+
+    @media (min-width: 600px) {
+      & {
+        width: auto;
+      }
+    }
+
+    @media (min-width: 900px) {
+      & {
+        top: 0;
+        translate: 24%;
+        height: auto;
+      }
+    }
+  }
+
+  .thank-you {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 300px;
+
+    &__left {
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: 900px) {
+      flex-direction: row;
+      padding: 80px 0 80px 0;
+      margin-bottom: 200px;
+
+      &__right {
+        margin-left: auto;
+      }
+    }
+
+    h2 {
+      margin-inline: auto;
+      width: 15ch;
+      margin-top: 50px;
+      font-weight: 700;
+      font-size: var(--step-0);
+      line-height: 1;
+      letter-spacing: -1px;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    &__text {
+      color: var(--stone-300);
+      flex-wrap: wrap;
+      text-align: center;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      max-width: 445px;
+      padding: 5px;
+    }
+
+    @media (min-width: 900px) {
+      .thank-you__text,
+      h2 {
+        margin-top: 0;
+        text-align: left;
+        margin-bottom: 32px;
+        max-width: 36ch;
+      }
+    }
+
+    span {
+      color: var(--accent-green-400);
+    }
+  }
+
+  .social {
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      text-decoration: underline;
+    }
+
+    &__link:nth-child(2) {
+      margin-bottom: 30px;
+    }
+
+    &__link:hover {
+      filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(380%)
+        hue-rotate(94deg) brightness(91%) contrast(96%);
+      transition: color 200ms ease-in-out;
+      text-decoration: underline;
+    }
+
+    &__link:focus {
+      filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(380%)
+        hue-rotate(94deg) brightness(91%) contrast(96%);
+    }
+
+    @media (min-width: 900px) {
+      &__link {
+        justify-content: flex-start;
+        width: fit-content;
+      }
+    }
+  }
+</style>
