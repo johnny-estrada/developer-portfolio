@@ -48,20 +48,11 @@ import ContactForm from './form/ContactForm.astro';
     @media (min-width: 900px) {
       align-items: start;
       flex-direction: row;
-      padding: 120px 0 120px 0;
+      padding-bottom: 120px;
 
       &__left {
         margin-right: 42px;
       }
-    }
-
-    h3 {
-      font-weight: 700;
-      font-size: var(--step-0);
-      letter-spacing: -1px;
-      text-align: center;
-      margin-bottom: 5px;
-      
     }
 
     &__text {
@@ -80,11 +71,6 @@ import ContactForm from './form/ContactForm.astro';
         margin-bottom: 32px;
         max-width: 36ch;
       }
-
-      h3 {
-        min-width: 425px;
-        text-align: left;
-      }
     }
 
     span {
@@ -102,7 +88,7 @@ import ContactForm from './form/ContactForm.astro';
 
     @media (min-width: 900px) {
       & {
-        padding-top: 120px;
+        margin: 120px 0;
       }
     }
   }
