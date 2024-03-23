@@ -1,10 +1,10 @@
-# 🌟 Developer Portfolio
+# <img src="./public/favicon.svg" alt="Developer Portfolio Favicon" style="width: 36px; height: 36px;"> Klarity Issue Tracker
+
 
 ## Overview
 This is my personal web developer portfolio showcasing my projects, skills, and experience. The portfolio is built using **Astro**, vanilla CSS, and JavaScript. It's a static site with a contact form and interactive elements to highlight my work.
 
 ![Portfolio Demo](./src//assets//images/portfolio-preview.JPG)
-![Portfolio Demo](./src//assets//images/portfolio-preview-mobile.JPG)
 
 ## Table of Contents
 1. [About](#about)
