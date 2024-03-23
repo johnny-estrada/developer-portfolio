@@ -15,7 +15,7 @@ This is my personal web developer portfolio showcasing my projects, skills, and 
 
 ---
 
-## Projects 💻 🎨
+## Projects 💻
 Here are some of the projects featured in my portfolio:
 - **Klarity Issue Tracking Web App**: Klarity is an issue tracker web application built with MySQL, React, TypeScript, Node.js, Express, and Tailwind CSS. It provides a platform for managing and tracking issues, facilitating collaboration and organization within teams.
 - **Interpreter in Go**: In progress.
