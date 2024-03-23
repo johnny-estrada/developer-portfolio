@@ -1,4 +1,4 @@
-# <img src="./public/favicon.svg" alt="Developer Portfolio Favicon" style="width: 36px; height: 36px;"> Klarity Issue Tracker
+# <img src="./public/favicon.svg" alt="Developer Portfolio Favicon" style="width: 36px; height: 36px;"> Developer Portfolio
 
 
 ## Overview
