@@ -1,55 +1,44 @@
-# Astro Starter Kit: Basics
+# 🌟 Developer Portfolio
 
-```
-npm create astro@latest -- --template basics
-```
-[![Netlify Status](https://api.netlify.com/api/v1/badges/82a0b95c-f7ba-453e-96ac-d55ca3e60b9f/deploy-status)](https://app.netlify.com/sites/johnny-estrada/deploys)
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Overview
+This is my personal web developer portfolio showcasing my projects, skills, and experience. The portfolio is built using **Astro**, vanilla CSS, and JavaScript. It's a static site with a contact form and interactive elements to highlight my work.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Portfolio Demo](./src//assets//images/portfolio-preview.JPG)
+![Portfolio Demo](./src//assets//images/portfolio-preview-mobile.JPG)
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## Table of Contents
+1. [About](#about)
+2. [Projects](#projects)
+3. [Skills](#skills)
+4. [Contact](#contact)
+5. [License](#license)
+
+---
+
+## Projects 🛠️
+Here are some of the projects featured in my portfolio:
+- **Klarity Issue Tracking Web App**: Klarity is an issue tracker web application built with MySQL, React, TypeScript, Node.js, Express, and Tailwind CSS. It provides a platform for managing and tracking issues, facilitating collaboration and organization within teams.
+- **Interpreter in Go**: In progress.
+
+---
+
+## Skills 💻
+- **Programming**: HTML, CSS, JavaScript, TypeScript
+- **Technology**: Netlify, DigitalOcean, Docker
+- **Frameworks/Libraries**: React, Tailwind, Express
+- **Content Management**: Tridion, Documentum
+- **Database/ORM**: MySQL, Sequelize
+- **Web Server**: Node.js
+- **Tools**: Git, GitHub, JIRA, ClearQuest, VScode
+- **Business**: SharePoint, MS Office, Agile, SCRUM, Waterfall
 
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## Contact 📧
+Feel free to reach out to me through the contact form on my portfolio website. I'm open to collaborations, job opportunities, or just a friendly chat!
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+---
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## License 📝
+This portfolio is licensed under the [MIT License](https://mit-license.org/).
