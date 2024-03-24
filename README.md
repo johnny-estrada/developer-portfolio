@@ -2,7 +2,7 @@
 
 ## Overview 
 
-This is my personal web developer portfolio showcasing my projects, skills, and experience. The portfolio is built using **Astro**, vanilla CSS, and JavaScript. It's a static site with a contact form and interactive elements to highlight my work.
+This is [my personal web developer portfolio](https://www.johnnyestrada.dev) showcasing my projects, skills, and experience. The portfolio is built using **Astro**, vanilla CSS, and JavaScript. It's a static site with a contact form and interactive elements to highlight my work.
 
 ![Portfolio Demo](./src//assets//images/portfolio-preview.JPG)
 
@@ -18,7 +18,7 @@ This is my personal web developer portfolio showcasing my projects, skills, and 
 
 ## Projects 💻
 
-Here are some of the projects featured in [my portfolio](https://www.johnnyestrada.dev):
+Here are some of the projects featured in [my portfolio](https://www.johnnyestrada.dev/#projects):
 
 - **Klarity Issue Tracking Web App**: Klarity is an issue tracker web application built with MySQL, React, TypeScript, Node.js, Express, and Tailwind CSS. It provides a platform for managing and tracking issues, facilitating collaboration and organization within teams.
 - **Interpreter in Go**: In progress.
