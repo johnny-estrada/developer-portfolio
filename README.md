@@ -8,10 +8,10 @@ This is [my personal web developer portfolio](https://www.johnnyestrada.dev) sho
 
 ## Table of Contents 
 
-1. [Projects](#projects)
-2. [Skills](#skills)
-3. [Contact](#contact)
-4. [License](#license)
+1. Projects
+2. Skills
+3. Contact
+4. License
 
 ---
 
